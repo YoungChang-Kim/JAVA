@@ -25,13 +25,13 @@ public class MainTestMod {
 		//Seller(보유사과개수, 보유바나나개수) 객체 2개 생성 - ok
 	
 		//Buyer(과일 살수 있는 총 보유 금액) 객체 3개 생성 - ok
-		Buyer buyer01 = new Buyer("유리", 2000); // 돈이 모자람
+		Buyer buyer01 = new Buyer("유리", 200); // 돈이 모자람
 		Buyer buyer02 = new Buyer("철수", 1500);
 		Buyer buyer03 = new Buyer("짱구", 1000);
 		
 		//Buyer 형 모든 객체의 order 메소드 호출
 		buyer01.order(seller01, 10, 12);
-		buyer02.order(seller02, 10, 10); // 사려는 갯수가 해당 가게의 갯수보다 많음
+		buyer02.order(seller02, 16, 19); // 사려는 갯수가 해당 가게의 갯수보다 많음
 		buyer03.order(seller02, 5, 8);
 
 		//위에 만든 모든 객체의 객체 변수 값 출력하기
@@ -95,8 +95,8 @@ class Seller {
 	Apple apple;
 	Banana banana;
 
-	Seller(int appleCount, int bananaCount){
-		this.name = "";
+	Seller(String name, int appleCount, int bananaCount){
+		this.name = name;
 		this.appleCount = appleCount;
 		this.bananaCount = bananaCount;
 	}
@@ -168,7 +168,7 @@ class Buyer {
 	public void order(Seller seller, int appleCount, int bananaCount) {
 		int total = seller.sell(appleCount, bananaCount);
 		if(total > this.buyerMoney){
-			System.out.println(this.getName+" : 돈이 부족합니다.");
+			System.out.println(this.getName()+" : 돈이 부족합니다.");
 		}else{
 			giveMoney(seller, total);
 		}
