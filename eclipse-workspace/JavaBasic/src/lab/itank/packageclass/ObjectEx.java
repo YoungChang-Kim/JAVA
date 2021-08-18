@@ -1,18 +1,18 @@
-package lab.itank;
+package lab.itank.packageclass;
 
 //Object
-public class Parent extends Object{
+public class ObjectEx extends Object{
 	//메소드 11 : Object
 	
 	public static void main(String[] args) {
 		
-		Parent parent0 = new Parent();		
+		ObjectEx parent0 = new ObjectEx();		
 //		System.out.println("hashCode() = "+parent0.hashCode());
 //		System.out.println("getClass() = "+parent0.getClass());
 //		System.out.println("toString() = "+parent0.toString());
 //		System.out.println("toString() 생략 = "+parent0);
 		
-		Parent parent1 = new Parent();
+		ObjectEx parent1 = new ObjectEx();
 		// ==, equals
 //		System.out.println(parent0.equals(parent0));//true
 //		System.out.println(parent0==parent0);//true

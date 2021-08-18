@@ -1,4 +1,4 @@
-package lab.itank;
+package lab.itank.packageclass;
 
 public class Point {
 	int x;
